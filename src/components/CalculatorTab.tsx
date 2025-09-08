@@ -5,30 +5,52 @@ import { Car, Calculator, FileText, Download } from 'lucide-react';
 const mockModels = [
   {
     id: '1',
-    name: 'BMW X5',
-    years: '2019-2023',
-    basePrice: 2500,
+    name: 'Yamaha YFZ450R',
+    years: '2020-2024',
+    basePrice: 3200,
     coverageTypes: [
       { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
-      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' }
+      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' },
+      { id: 'sport', name: 'Acoperire sport', description: 'Design sportiv cu grafică agresivă' }
     ],
     extraOptions: [
-      { id: 'mirrors', name: 'Oglinzi', price: 150 },
-      { id: 'handles', name: 'Mânere', price: 100 }
+      { id: 'fenders', name: 'Aripi', price: 280 },
+      { id: 'tank', name: 'Rezervor', price: 320 },
+      { id: 'plastics', name: 'Carene laterale', price: 450 }
     ]
   },
   {
     id: '2',
-    name: 'Audi Q7',
-    years: '2020-2024',
+    name: 'Can-Am Maverick X3',
+    years: '2021-2024',
+    basePrice: 4500,
+    coverageTypes: [
+      { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
+      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' },
+      { id: 'racing', name: 'Acoperire racing', description: 'Design pentru competiții' }
+    ],
+    extraOptions: [
+      { id: 'doors', name: 'Uși', price: 650 },
+      { id: 'hood', name: 'Capotă', price: 380 },
+      { id: 'roof', name: 'Acoperiș', price: 420 },
+      { id: 'bumpers', name: 'Bare protecție', price: 290 }
+    ]
+  },
+  {
+    id: '3',
+    name: 'Honda CRF450R',
+    years: '2019-2024',
     basePrice: 2800,
     coverageTypes: [
       { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
-      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' }
+      { id: 'minimal', name: 'Acoperire minimă', description: 'Doar elementele esențiale' },
+      { id: 'custom', name: 'Acoperire personalizată', description: 'Design unic personalizat' }
     ],
     extraOptions: [
-      { id: 'mirrors', name: 'Oglinzi', price: 180 },
-      { id: 'handles', name: 'Mânere', price: 120 }
+      { id: 'tank', name: 'Rezervor', price: 250 },
+      { id: 'fender', name: 'Aripa față', price: 180 },
+      { id: 'shrouds', name: 'Carene radiator', price: 320 },
+      { id: 'airbox', name: 'Cutie filtru aer', price: 150 }
     ]
   }
 ];
@@ -37,18 +59,28 @@ const mockModels = [
 const mockPrintMaterials = [
   {
     id: '1',
-    name: 'Vinil Standard',
-    percentage: 15,
+    name: '3M IJ180Cv3 - Vinil Cast Premium',
+    percentage: 35,
     allowsWhitePrint: false,
     whitePrintSettings: null
   },
   {
     id: '2',
-    name: 'Vinil Premium',
-    percentage: 25,
+    name: 'Avery Dennison MPI 1105 - Vinil Cast',
+    percentage: 32,
     allowsWhitePrint: true,
     whitePrintSettings: {
-      additionalCost: 200,
+      additionalCost: 280,
+      description: 'Print cu alb pentru culori vibrante'
+    }
+  },
+  {
+    id: '3',
+    name: 'Hexis HX30000 - Vinil Premium Cast',
+    percentage: 38,
+    allowsWhitePrint: true,
+    whitePrintSettings: {
+      additionalCost: 320,
       description: 'Print cu alb pentru culori vibrante'
     }
   }
@@ -58,15 +90,21 @@ const mockPrintMaterials = [
 const mockLaminationMaterials = [
   {
     id: '1',
-    name: 'Laminare Standard',
+    name: '3M 8518 - Laminat Gloss',
     calculationType: 'percentage',
-    value: 10
+    value: 18
   },
   {
     id: '2',
-    name: 'Laminare Premium',
+    name: '3M 8519 - Laminat Matt',
+    calculationType: 'percentage',
+    value: 20
+  },
+  {
+    id: '3',
+    name: 'Avery DOL 1460Z - Laminat Texturat',
     calculationType: 'fixed',
-    value: 500
+    value: 680
   }
 ];
 

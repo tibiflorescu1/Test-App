@@ -4,33 +4,88 @@ import { Plus, Edit, Trash2, Car, Bike, Truck } from 'lucide-react';
 // Mock data inline
 const mockVehicleModels = [
   {
-    id: '1',
-    name: 'BMW X5',
+    id: '1', 
+    name: 'Yamaha YFZ450R',
     category: 'ATV' as const,
-    years: '2019-2023',
-    basePrice: 2500,
+    years: '2020-2024',
+    basePrice: 3200,
     coverageTypes: [
       { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
-      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' }
+      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' },
+      { id: 'sport', name: 'Acoperire sport', description: 'Design sportiv cu grafică agresivă' }
     ],
     extraOptions: [
-      { id: 'mirrors', name: 'Oglinzi', price: 150 },
-      { id: 'handles', name: 'Mânere', price: 100 }
+      { id: 'fenders', name: 'Aripi', price: 280 },
+      { id: 'tank', name: 'Rezervor', price: 320 },
+      { id: 'plastics', name: 'Carene laterale', price: 450 }
     ]
   },
   {
     id: '2',
-    name: 'Audi Q7',
+    name: 'Can-Am Maverick X3',
     category: 'SSV' as const,
-    years: '2020-2024',
+    years: '2021-2024',
+    basePrice: 4500,
+    coverageTypes: [
+      { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
+      { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' },
+      { id: 'racing', name: 'Acoperire racing', description: 'Design pentru competiții' }
+    ],
+    extraOptions: [
+      { id: 'doors', name: 'Uși', price: 650 },
+      { id: 'hood', name: 'Capotă', price: 380 },
+      { id: 'roof', name: 'Acoperiș', price: 420 },
+      { id: 'bumpers', name: 'Bare protecție', price: 290 }
+    ]
+  },
+  {
+    id: '3',
+    name: 'Honda CRF450R',
+    category: 'Motocicleta' as const,
+    years: '2019-2024',
     basePrice: 2800,
+    coverageTypes: [
+      { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
+      { id: 'minimal', name: 'Acoperire minimă', description: 'Doar elementele esențiale' },
+      { id: 'custom', name: 'Acoperire personalizată', description: 'Design unic personalizat' }
+    ],
+    extraOptions: [
+      { id: 'tank', name: 'Rezervor', price: 250 },
+      { id: 'fender', name: 'Aripa față', price: 180 },
+      { id: 'shrouds', name: 'Carene radiator', price: 320 },
+      { id: 'airbox', name: 'Cutie filtru aer', price: 150 }
+    ]
+  },
+  {
+    id: '4',
+    name: 'Polaris RZR XP 1000',
+    category: 'SSV' as const,
+    years: '2018-2023',
+    basePrice: 4200,
     coverageTypes: [
       { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
       { id: 'partial', name: 'Acoperire parțială', description: 'Protecție pentru zonele principale' }
     ],
     extraOptions: [
-      { id: 'mirrors', name: 'Oglinzi', price: 180 },
-      { id: 'handles', name: 'Mânere', price: 120 }
+      { id: 'doors', name: 'Uși', price: 580 },
+      { id: 'dashboard', name: 'Bord', price: 220 },
+      { id: 'fenders', name: 'Aripi', price: 340 }
+    ]
+  },
+  {
+    id: '5',
+    name: 'Kawasaki KX450F',
+    category: 'Motocicleta' as const,
+    years: '2020-2024',
+    basePrice: 2650,
+    coverageTypes: [
+      { id: 'full', name: 'Acoperire completă', description: 'Protecție completă pentru vehicul' },
+      { id: 'sport', name: 'Acoperire sport', description: 'Design sportiv cu grafică agresivă' }
+    ],
+    extraOptions: [
+      { id: 'tank', name: 'Rezervor', price: 240 },
+      { id: 'shrouds', name: 'Carene radiator', price: 300 },
+      { id: 'numberplates', name: 'Plăci număr', price: 120 }
     ]
   }
 ];
